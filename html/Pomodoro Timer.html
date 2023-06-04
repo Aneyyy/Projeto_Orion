@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>Pomodoro - ÓRION</title>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="512x512" href="/img/index/foguete.png">
+    <link rel = "stylesheet" href = "/css/default_style.css">
+    <link rel = "stylesheet" href = "/css/class_message_style.css">
+    <link rel = "stylesheet" type = "text/css" href = "/css/style.css">
+ </head>
+<body> 
+    <div id = "container"  class = "default_content_box">
+        <header>
+            <div class = "box_main_title">
+                <h1 class = "main_title">ÓRION - MANTENHA O FOCO</h1>
+            </div>
+            
+        </header>
+
+        <div id = "container_body">
+
+            <div id = "box_pomodoro_basic_info">
+                <h2 id = "txt_pomodoro_current_stage"></h2>
+                <h2 id = "txt_pomodoro_time_infos"><span id = "txt_pomodoro_current_time">00:00</span><span id = "txt_pomodoro_current_stage_duration"></span></h2>
+            </div>
+            
+            <div id = "box_countdown_bars">
+                    
+                    <progress id = "pomodoro_bar_1" class = "pomodoro_bar" min = "0" max = "100" value = "0"></progress>
+                    <progress id = "short_break_bar_1" class = "short_break_bar" min = "0" max = "100" value = "0"></progress>
+                    <progress id = "pomodoro_bar_2" class = "pomodoro_bar" min = "0" max = "100" value = "0"></progress>
+                    <progress id = "short_break_bar_2" class = "short_break_bar" min = "0" max = "100" value = "0"></progress>
+                    <progress id = "pomodoro_bar_3" class = "pomodoro_bar" min = "0" max = "100" value = "0"></progress>
+                    <progress id = "short_break_bar_3" class = "short_break_bar" min = "0" max = "100" value = "0"></progress>
+                    <progress id = "pomodoro_bar_4" class = "pomodoro_bar" min = "0" max = "100" value = "0"></progress>
+                    <progress id = "long_break_bar_1" class = "long_break_bar" min = "0" max = "100" value = "0"></progress>
+    
+            </div>
+    
+        
+           
+            <div id = "box_pomodoro_controls">
+    
+                <div class = "box_button_pomodoro_control">
+                    <button id = "bt_back">&laquo;</button>
+                </div>
+    
+                <div class = "box_button_pomodoro_control">
+                    <button id = "bt_start_resume">Começar</button>
+                </div>
+    
+                <div class = "box_button_pomodoro_control">
+                    <button id = "bt_pause">Pausar</button>
+                </div>
+    
+                <div class = "box_button_pomodoro_control">
+                    <button id = "bt_cancel">Cancelar</button>
+                </div>
+    
+                <div class = "box_button_pomodoro_control">
+                    <button id = "bt_advance">&raquo;</button>
+                </div>
+            </div>
+
+        </div>
+        <ul>
+            <li id = "bt_open_configurations_menu">Configurações</li>
+            <li class="botao_view" id = "bt_open_box_credits"></li>
+        </ul>
+       
+    </div>
+
+
+    <div class = "fill_all visibility_hidden">
+        <span id = "bt_close_configurations_menu" alt = "Close" title = "Close">X</span>
+        <div id = "configurations_menu">
+          
+            <div class="configur">
+                <h1 id = "title_configurations_menu"></h1>
+            </div>
+          
+                <fieldset class = "pomodoro_duration_raw_time_configuration_box">
+                            <legend>Definir duração de Ação</legend>
+                        
+                             <label><input type = "radio" value = "00:20:00" name = "pomodoro_duration_raw_time">20 Minutos</label>
+                             <label><input type = "radio" value = "00:25:00" name = "pomodoro_duration_raw_time" checked >25 Minutos</label>
+                             <label><input type = "radio" value = "00:30:00" name = "pomodoro_duration_raw_time">30 Minutos</label>
+                             <label><input type = "radio" value = "00:35:00" name = "pomodoro_duration_raw_time">35 Minutos</label>
+                             <label><input type = "radio" value = "00:40:00" name = "pomodoro_duration_raw_time">40 Minutos</label>
+                             <label><input type = "radio" value = "00:45:00" name = "pomodoro_duration_raw_time">45 Minutos</label>
+                             <label><input type = "radio" value = "00:50:00" name = "pomodoro_duration_raw_time">50 Minutos</label>             
+                </fieldset>
+
+                <fieldset class = "pomodoro_short_break_duration_raw_time_configuration_box">
+                    <legend>Definir Descanso</legend>
+                        
+                             <label><input type = "radio" value = "00:05:00" name = "pomodoro_short_break_duration_raw_time" checked >5 Minutos</label>
+                             <label><input type = "radio" value = "00:10:00" name = "pomodoro_short_break_duration_raw_time">10 Minutos</label>
+                             <label><input type = "radio" value = "00:15:00" name = "pomodoro_short_break_duration_raw_time">15 Minutos</label>
+                             <label><input type = "radio" value = "00:20:00" name = "pomodoro_short_break_duration_raw_time">20 Minutos</label>
+                             <label><input type = "radio" value = "00:25:00" name = "pomodoro_short_break_duration_raw_time">25 Minutos</label>
+                </fieldset>
+
+                <fieldset class = "pomodoro_long_break_duration_raw_time_configuration_box">
+                    <legend>Definir Descanso Longo</legend>
+                        
+                             <label><input type = "radio" value = "00:30:00" name = "pomodoro_long_break_duration_raw_time" checked>30 Minutos</label>
+                             <label><input type = "radio" value = "00:35:00" name = "pomodoro_long_break_duration_raw_time">35 Minutos</label>
+                             <label><input type = "radio" value = "00:40:00" name = "pomodoro_long_break_duration_raw_time">40 Minutos</label>
+                             <label><input type = "radio" value = "00:45:00" name = "pomodoro_long_break_duration_raw_time">45 Minutos</label>
+                             <label><input type = "radio" value = "00:50:00" name = "pomodoro_long_break_duration_raw_time">50 Minutos</label>
+                </fieldset>
+
+                <fieldset class = "pomodoro_timer_tic_tac_sound_configuration_box">
+                        <legend>Ouça um Lo-Fi enquanto estuda</legend>
+                        <input type = "checkbox" id = "tic_tac_tune">
+                        <fieldset class = "pomodoro_timer_preview_tic_tac_sound_box">
+                            <legend>Preview</legend>
+                            <audio id = "audio_tic_tac_tune" src = "/media/tic tac.mp3" controls loop></audio>
+                        </fieldset>
+                </fieldset>
+
+                <fieldset class = "pomodoro_alarm_sound_configuration_box">
+                    <legend>Definir Alarme</legend>
+
+                        <label><input type = "radio" value = "0" name = "alarm_tune" checked >Alarme 1</label>
+                        <label><input type = "radio" value = "1" name = "alarm_tune">Alarme 2</label>
+                        <label><input type = "radio" value = "2" name = "alarm_tune">Alarme 3</label>
+                        <label><input type = "radio" value = "3" name = "alarm_tune"> Alarme 4</label>
+                        <label><input type = "radio" value = "4" name = "alarm_tune">Alarme 5</label>
+                  
+                    <fieldset class = "preview_alarm_sound_box">
+                        <legend></legend>
+                        <audio id = "audio_alarm_tune" src = "/media/default.mp3" controls loop></audio>
+                    </fieldset>
+                </fieldset>
+              
+            <div id = "box_bt_save_data">
+                <button id = "bt_save_data">Salvar</button>
+            </div>
+       
+        </div> 
+    </div>
+
+              
+
+    <div class = "fill_all visibility_hidden">
+        <span id = "bt_close_box_credits" alt = "Close" title = "Close">X</span>
+
+        <div id = "box_credits" class = "default_content_box">
+
+        </div>
+    </div>
+    
+    <template id = "temp_alert_box">
+        <div class = "fill_all">
+            <div class = "alert_box">
+                <div>
+                    <h1 class = "title_alert_box"></h1>
+                </div>   
+            
+                <div>
+                    <span class = "txt_alert_box"></span>
+                </div>
+                
+                <div>
+                    <button class = "bt_alert_box">Ok</button>
+                </div>
+            </div>
+        </div>
+    </template>
+
+
+    <template id = "temp_confirm_box">
+        <div class = "fill_all">
+            <div class = "confirm_box">
+                <div>
+                    <h1 class = "title_confirm_box">Confirmar</h1>
+                </div>   
+
+                <div>
+                    <span class = "txt_confirm_box"></span>
+                </div>
+                
+                <div>
+                    <button class = "bt_confirm_box no">Não</button>
+                    <button class = "bt_confirm_box yes">Sim</button>
+                </div>
+            </div>
+        </div>
+    </template>
+
+
+ 
+    <script src = "/js/timer_local_storage_data.js"></script>
+    <script src = "/js/message.js"></script>
+    <script src = "/js/time_interval.js"></script>
+    <script src = "/js/script.js"></script>
+</body>
+</html>

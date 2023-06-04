@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" sizes="512x512" href="/img/index/foguete.png">
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/css/cadastro.css" />
+  <link rel="stylesheet" href="/css/popup.css">
+  <title>Cadastrar / Login </title>
+</head>
+ 
+<body>
+
+
+
+
+
+</div>
+
+<div class="popUp_Container" id="email_enviado">
+  <div class="popUp">
+    <ion-icon class="ion-icon" name="close-outline" onclick=fecharEmail()></ion-icon>
+    <div class="popUp_img" id="fechar" > <img src="/img/sucesso.png"> </div>
+
+    <div class="fechar2">  
+      <div class="fechar_text"> <H1>SUCESSO</H1 ><br><br><br> <p>Seu E-mail foi enviado!</p> </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+ <div class="container">
+    <div class="forms-container">
+      <div class="signin-signup">
+        <form action="#" class="sign-in-form">
+          <h2 class="title">Login</h2>
+          <div class="input-field">
+
+            <i class="fas fa-user"></i>
+    
+            <input type="email" name="email" id="email" placeholder="E-mail"  onchange="onChangeEmail()"/>
+          </div>
+
+          <div class="validacao">
+          <div class="error" id="email-required-error">Email obrigatório</div>
+            <div class="error" id="email-invalid-error">Email inválido</div>
+          </div>
+
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            
+         
+            <input type="password" name="password" id="password" placeholder="Senha" onchange="onChangePassword()"/>
+            <div id="icon" onclick="showHide()"></div>
+          </div>
+          <div class="error" id="password-required-error">Senha obrigatória</div>
+
+         
+          <div>
+             <button type="button" class="solid" id="login-button" disabled="true" onclick="login()">Entrar</button>
+      </div>  
+        
+          <div>
+            <button type="button" id="recover-password-button" class="recuperar" onclick="recoverPassword()" disabled="true">Recuperar senha</button>
+        </div>
+
+          <p class="social-text">Logar com:</p>
+          <div class="social-media">
+            <a href="#" class="social-icon" onclick="authGoogle()">
+              <img src="/img/index/simbolo-do-google.png">
+            </a>
+            <a href="#" class="social-icon">
+              <img src="/img/index/facebook.png">
+            </a>
+            <a href="#" class="social-icon">
+              <img src="/img/index/twitter.png" onclick="authTwiter()">
+            </a>
+            <a href="#" class="social-icon">
+              <img src="/img/index/github.png">
+            </a>
+          </div>
+        </form>
+
+
+<form action="#" class="sign-up-form">
+  <h2 class="title">Cadastrar</h2>
+
+
+  <div class="input-field">
+    <i class="fas fa-user"></i>
+    <input type="text" placeholder="Username" id="usuarioCad"/>
+  </div>
+
+  <div class="input-field">
+    <i class="fas fa-envelope"></i>
+    <input type="email"  name="email" placeholder="Email" id="email2"  onchange="onChangeEmail2()"/>
+  </div>
+  <div class="errorCad" id="email-obg">Email obrigatório</div>
+  <div class="errorCad" id="email-invalid">Email inválido</div>
+
+
+
+  <div class="input-field">
+    <i class="fas fa-lock"></i>
+    <input type="password" placeholder="Senha" id="password2" onchange="onChangePassword2()" />
+  </div>
+  <div class="errorCad" id="password-required-error2">Senha é obrigatória</div>
+  <div class="errorCad"  id="password-min-error">Senha deve conter no mínimo 6 caracteres</div>
+
+
+  <div class="input-field">
+    <i class="fas fa-lock"></i>
+    <input type="password" placeholder="Confirmar senha" id="confirmPassword"  onchange="onChangeConfirmPassword()"/>
+  </div>
+  <div class="errorCad" id="password-diferentes">Senhas não coincidem</div>
+
+
+
+  <button type="button" class="solid2" id="register-button" onclick="register()" disabled="true">Cadastrar</button>
+
+  <p class="social-text">Logar com:</p>
+  <div class="social-media">
+    <a href="#" class="social-icon"onclick="authGoogle()">
+      <img src="/img/index/simbolo-do-google.png" >
+    </a>
+    <a href="#" class="social-icon">
+      <img src="/img/index/facebook.png">
+    </a>
+    <a href="#" class="social-icon" onclick="authTwiter()">
+      <img src="/img/index/twitter.png">
+    </a>
+    <a href="#" class="social-icon">
+      <img src="/img/index/github.png">
+    </a>
+  </div>
+</form>
+      </div>
+    </div>
+
+    <div class="panels-container">
+      <div class="panel left-panel">
+        <div class="content">
+          <h3>É novo por aqui?</h3>
+          <p>
+            Clique no botão e registre-se
+          </p>
+          <button class="btn-register" id="sign-up-btn">
+            Cadastrar-se
+          </button>
+        </div>
+        <img src="/img/index/login.png" class="image" alt="" />
+      </div>
+      <div class="panel right-panel">
+        <div class="content">
+          <h3>Já tem conta?</h3>
+          <p>
+            Faça Login e aproveite!
+          </p>
+          <button class="btn-register" id="sign-in-btn">
+            Fazer Login
+          </button>
+        </div>
+        <img src="/img/index/cadastro.png" class="image" alt="" />
+      </div>
+    </div>
+  </div> 
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore-compat.js"></script>
+  
+
+
+  <script src="/js/firabase-init.js"></script>
+  
+    <script src="/js/cadastro.js"></script>
+
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script src="/js/loading.js"></script>
+  <script src="/js/validations.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="/js/icon.js"></script>
+<script src="/js/popUp.js"></script>
+ 
+  
+
+  <script>
+    ScrollReveal().reveal('.container', { scale: 5 });
+  </script>
+
+
+</body>
+
+</html>

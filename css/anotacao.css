@@ -1,0 +1,52 @@
+.tres{
+  background: url(/img/fundo_anotacao.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  padding: 40px;
+  gap: 24px;
+  color: white;
+}
+
+.note {
+  height: 200px;
+  width: 215px;
+  box-sizing: border-box;
+  padding: 16px;
+  border: 2px solid white;
+  border-radius: 10px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
+  color: aliceblue;
+  font-weight: 500;
+  resize: none;
+  font-family: sans-serif;
+  font-size: 18px;
+  background-color: rgb(0, 94, 201);
+}
+
+.note:hover{
+  border: none;
+  outline: none;
+}
+
+.add-note {
+  height: 200px;
+  width: 220px;
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.397);
+  border-radius: 10px;
+  font-size: 120px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-note:hover {
+  background: rgba(0, 0, 0, 0.486);
+}

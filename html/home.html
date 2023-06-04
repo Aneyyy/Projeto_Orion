@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="512x512" href="/img/index/foguete.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="/css/styleÓrion.css">
+    <link rel="stylesheet" href="/css/pomodoro.css">
+    <link rel="stylesheet" href="/css/anotacao.css">
+    <link rel="stylesheet" href="/css/funcao.css">
+    <link rel="stylesheet" href="/css/config.css">
+    <link rel="stylesheet" href="/css/eventos.css">
+    <link rel="stylesheet" href="/css/popup.css">
+    <link rel="stylesheet" href="/css/home.css">
+
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <title>ÓRION - MANTENHA O FOCO</title>
+</head>
+
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <a href="/index.html"><img src="/img/index/macaco.png" alt=""></a>
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">ÓRION</span>
+                    <span class="profession">mantenha seu foco</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box ">
+
+                    <span class="text nav-text" id="foco">Mantenha o foco</span>
+
+                </li>
+                <!-- <li class="menu-link ">
+                    <a href="#um">
+                        <i class='bx bxs-home icon' ></i>
+                        <span class="text nav-text">Início</span>
+                    </a>
+                </li> -->
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#dois">
+                            <i class='bx bxs-stopwatch icon'></i>
+                            <span class="text nav-text">Pomodoro</span>
+                        </a>
+                    </li>
+
+
+
+
+                    <li class="nav-link">
+                        <a href="#quatro">
+                            <i class='bx bxs-calendar-event icon'></i>
+                            <span class="text nav-text">Eventos</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#tres" id="load">
+                            <i class='bx bxs-notepad icon'></i>
+                            <span class="text nav-text">Anotações</span>
+                        </a>
+                    </li>
+
+                    <!-- <li class="nav-link ">
+                        <a href="#cinco">
+                            <i class='bx bxs-joystick icon'></i>
+                            <span class="text nav-text">Quiz</span>
+                        </a>
+                    </li> -->
+
+
+                    <li class="nav-link">
+                        <a href="#seis">
+                            <i class='bx bxs-cog icon'></i>
+                            <span class="text nav-text">Configurações</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a>
+                        <i class='bx bx-log-out icon' onclick="logOut()"></i>
+                        <span class="text nav-text" onclick="logOut()">Sair</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text"> </span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+
+            </div>
+        </div>
+
+    </nav>
+
+
+    <main class="home">
+
+        <!-- INICIO -->
+        <!-- <section class="um" id="um">
+
+            <div class="wapper">
+                <div class="testimonial-container" id="testimonial-container"></div>
+                <button id="prev">&lt;</button>
+                <button id="next">&gt;</button>
+              </div>
+        </section> -->
+
+        <!-- POMODORO  -->
+        <section class="dois" id="dois">
+
+            <div class="App">
+                <div class="cards">
+                    <div class="card contact">
+                        <div class="icon">
+                            <img src="/img/POMODORO.png" alt="Contact us.">
+                        </div>
+
+                        <div class="informações_pomodoro">
+                            <span>- Não esqueça de separar suas tarefas abaixo para administrar melhor seu tempo e saber o
+                                que deve ser feito durante seu estudo.<br><br> 
+                                - Ao entrar, configure seu pomodoro de acordo com sua necessidade ou
+                                vontade e inicie seu pomodoro.<br><br>
+                                - Os quadrados em cima dos botões são as barras de progresso do seu Pomodoro<br><br>
+                                <br>
+                            </span>
+                            <button id="pomodoros">Entrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="todo_list">
+                <div class="wraper">
+                    <div class="task-input">
+
+                        <input type="text" placeholder="Nova Tarefa">
+                    </div>
+                    <div class="controls">
+                        <div class="filters">
+                            <span class="active" id="all">Todas</span>
+                            <span id="pending">Pendentes</span>
+                            <span id="completed">Concluídas</span>
+                        </div>
+                        <button class="clear-btn">Limpar Todas</button>
+                    </div>
+                    <ul class="task-box"></ul>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!--  EVENTOS -->
+        <section class="quatro" id="quatro">
+
+            <div id="app">
+                <button class="add-note" type="button">+</button>
+            </div>
+
+        </section>
+
+        <!-- ANOTAÇÕES -->
+        <section class="tres" id="tres">
+
+
+
+            <script src="/js/anotacao.js"></script>
+        </section>
+
+        <!-- 
+        <section class="cinco" id="cinco">
+            
+            <div class="quiz_matematica">
+
+                  <div id="display-container">
+                    <div class="header">
+                      <div class="number-of-count">
+                        <span class="number-of-question">1 of 3 questions</span>
+                      </div>
+                      <div class="timer-div">
+                        <img src="timer-icon.svg" />
+                        <span class="time-left">10s</span>
+                      </div>
+                    </div>
+                    <div id="container">
+                        <div class="start-screen">
+                            <button id="start-button">Start</button>
+                          </div>
+                    </div>
+                    <button id="next-button">Next</button>
+                  </div>
+                  <div class="score-container hide">
+                    <div id="user-score">Demo Score</div>
+                    <button id="restart">Restart</button>
+                  </div>
+            </div>
+    
+    
+
+            <div class="cards_container">
+                <div class="card card-1">
+                    <div class="card-header">
+                        <img src="/img/cardes1.png"
+                            class="card-img" />
+                    </div>
+
+                    <div class="card-body">
+                        <h2 class="card-titulo">Quiz</h2>
+                        <p class="card-texto">
+
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <as class="start-button" id="btn-div">Entrar</a>
+                    </div>
+                </div>
+
+
+                <div class="card card-2">
+                    <div class="card-header">
+                        <img src="/img/cardes.png"
+                            class="card-img" />
+                    </div>
+
+                    <div class="card-body">
+                        <h2 class="card-titulo">Quiz</h2>
+
+                        <p class="card-texto">
+
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a>Entrar</a>
+                    </div>
+                </div>
+
+                <div class="card card-3">
+                    <div class="card-header">
+                        <img src="/img/cardes2.png"
+                            class="card-img" />
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-titulo" >Quiz</h2>
+                        <p class="card-texto">
+
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#">Entrar</a>
+                    </div>
+                </div>
+
+                  <div class="card card-1">
+                    <div class="card-header">
+                        <img src="/img/cardes4.png"
+                            class="card-img" />
+                    </div>
+
+                    <div class="card-body">
+                        <h2 class="card-titulo">Quiz</h2>
+                        <p class="card-texto">
+
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#">Entrar</a>
+                    </div>
+                </div>
+
+
+                <div class="card card-2">
+                    <div class="card-header">
+                        <img src="/img/cardes3.png"
+                            class="card-img" />
+                    </div>
+
+                    <div class="card-body">
+                        <h2 class="card-titulo">Quiz</h2>
+
+                        <p class="card-texto">
+
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#">Entrar</a>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- CONFIGURAÇÃO    -->
+        <section class="seis" id="seis">
+
+            <div class="configuracao">
+                <div class="informacoes">
+                    <div class="wrappper">
+                        <div class="contaneer">
+
+                            <span class="num" data-val="10">000</span>
+                            <p class="descricao">Horas</p>
+                            <span class="textt">Tempo em Pomdoro</span>
+                        </div>
+                        <div class="contaneer">
+
+                            <span class="num" data-val="6">000</span>
+                            <p class="descricao">Pendentes</p>
+                            <span class="textt">Eventos </span>
+                        </div>
+                        <div class="contaneer">
+
+                            <span class="num" data-val="27">000</span>
+                            <p class="descricao">Todas</p>
+                            <span class="textt">Anotações</span>
+                        </div>
+                        <div class="contaneer">
+
+                            <span class="num" data-val="12">000</span>
+                            <p class="descricao">Dias</p>
+                            <span class="textt">Conta Criada</span>
+                        </div>
+                    </div>
+
+                    <div class="wrapper2"></div>
+                </div>
+
+                <div class="informacoes_dois">
+                    <div class="banner_orion">
+
+                        <div class="bannerr">
+                            <div class="input-file-upload">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="perfil_foto">
+                        <div class="upload-btn">
+                            <input type="file" id="upfile" onchange="readURL(this); ">
+                            <button class="btn">
+                                <i class='bx bxs-camera-plus' id="camera"></i>
+                            </button>
+                        </div>
+                        <div class="foto_de_perfil">
+                            <img class="upload_img" id="file_upload">
+                        </div>
+                    </div>
+
+
+                    <div class="informacoes_pessoa">
+                        <div class="nome_usuario">
+                            <div class="user">
+                                <p>Matheus Tavares</p>
+                            </div>
+                            <div class="endereco">
+                                <p>teteu@gmail.com</p>
+                            </div>
+
+                            <div class="opcoes">
+
+                                <div class="senha">
+                                    <a class="mudar_senha"> Mudar Senha</a>
+                                </div>
+
+                                <div class="excluir_conta">
+                                    <a class="desativar_conta"> Desativar Conta</a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+
+
+        </section>
+    </main>
+
+
+
+
+    <!-- SCRIPTS SRC -->
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore-compat.js"></script>
+
+
+    <script src="/js/firabase-init.js"></script>
+
+    <script>function logOut() {
+            firebase.auth().signOut().then(() => {
+                window.location.href = "cadastro.html"
+            }
+            )
+        }
+    </script>
+
+    <script src="/js/todolist.js"></script>
+    <script src="/js/timer.js"></script>
+    <script src="/js/imagem_perfil.js"></script>
+    <script src="/js/quiz1.js"></script>
+    <script src="/js/testimonial.js"></script>
+    <script src="/js/config.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- SCRIPT  -->
+
+    <script>
+        var btn = document.getElementById('btn-div');
+        var quiz_portugues = document.querySelector('.quiz_portugues');
+        btn.addEventListener('click', function () {
+
+            if (quiz_portugues.style.display === 'block') {
+                quiz_portugues.style.display = 'none';
+            } else {
+                quiz_portugues.style.display = 'block';
+            }
+        });</script>
+
+    <!-- CHAMAR POMODRO -->
+    <script>
+        const icon = document.querySelector("#pomodoros")
+
+        icon.addEventListener('click', () => {
+            window.open('/html/Pomodoro Timer.html')
+        })
+    </script>
+
+
+    <script>
+        const inputFile = document.querySelector("#picture__input");
+        const pictureImage = document.querySelector(".picture__image");
+        const pictureImageTxt = "<i class='bx bxs-camera-plus' id='camera'></i>";
+        pictureImage.innerHTML = pictureImageTxt;
+
+        inputFile.addEventListener("change", function (e) {
+            const inputTarget = e.target;
+            const file = inputTarget.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+
+                reader.addEventListener("load", function (e) {
+                    const readerTarget = e.target;
+
+                    const img = document.createElement("img");
+                    img.src = readerTarget.result;
+                    img.classList.add("picture__img");
+
+                    pictureImage.innerHTML = "";
+                    pictureImage.appendChild(img);
+                });
+
+                reader.readAsDataURL(file);
+            } else {
+                pictureImage.innerHTML = pictureImageTxt;
+            }
+        });
+
+    </script>
+
+    <script>
+        const body = document.querySelector('body'),
+            sidebar = body.querySelector('nav'),
+            toggle = body.querySelector(".toggle"),
+            searchBtn = body.querySelector(".search-box"),
+            modeSwitch = body.querySelector(".toggle-switch"),
+            modeText = body.querySelector(".mode-text");
+
+
+        toggle.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        })
+
+        searchBtn.addEventListener("click", () => {
+            sidebar.classList.remove("close");
+        })
+
+        modeSwitch.addEventListener("click", () => {
+            body.classList.toggle("dark");
+
+            if (body.classList.contains("dark")) {
+                modeText.innerText = "";
+            } else {
+                modeText.innerText = "";
+
+            }
+        });
+    </script>
+
+</body>
+
+</html>

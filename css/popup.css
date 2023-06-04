@@ -1,0 +1,141 @@
+.popUp_Container:not(.active){
+    display: none;
+}
+.popUp_Container {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.521);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999999999;
+    transition: .5s ease;
+
+}
+
+.popUp_Container .popUp {
+    position: relative;
+    min-width: 200px;
+    min-height: 150px;
+    width: 550px;
+    height: 490px;
+    background: white;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.popUp_Container .popUp .fechar {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background: red;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    display: flex;
+}
+
+.popUp_Container .popUp .fechar2 {
+    position: relative;
+    width: 100%;
+    height: 20%;
+    background: rgb(255, 255, 255);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: flex;
+}
+
+.popUp_Container .popUp .fechar2 .fechar_text{width: 80%;}
+.popUp_Container .popUp .fechar2 .fechar_text h1 {
+    text-align: center;
+    position: relative;
+    text-align: center;
+    margin-left: 30%;
+    color: rgb(0, 194, 32);
+    font-size: 60px;
+}
+
+.popUp_Container .popUp .fechar2 .fechar_icon{width: 15%;}
+.ion-icon{
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 20px;
+    color: aliceblue;
+    font-size: 60px;
+    position: relative;
+    cursor: pointer;
+}
+
+.popUp_Container .popUp .fechar .fechar_text{
+    width: 80%;
+}
+
+.popUp_Container .popUp .fechar .fechar_text h1 {
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 40px;
+    color: aliceblue;
+    font-size: 25px;
+}
+
+.popUp_Container .popUp .fechar .fechar_icon{
+    width: 100%;
+}
+
+.ion-icon{
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 85%;
+    color: aliceblue;
+    font-size: 60px;
+    position: absolute;
+    z-index: 99999999999999999;
+    cursor: pointer;
+}
+
+.popUp_Container .popUp .popUp_img {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.popUp_Container .popUp .popUp_img img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.popUp_Container .popUp .fechar2 .fechar_text p{
+    text-align: center;
+    position: relative;
+    margin-top: -30px;
+    margin-left: 54px;
+    color: rgb(53, 185, 0);
+    font-size: 35px;
+    font-weight: 600;
+    width: 100%;
+}
+
+
+.popUp_Container .popUp .fechar3 .fechar_text p{
+    text-align: center;
+    position: relative;
+    margin-top: 30px;
+    margin-left: 0px;
+    color: rgb(0, 132, 185);
+    font-size: 35px;
+    font-weight: 600;
+    width: 100%;
+}
+
+
+
+

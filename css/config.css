@@ -1,0 +1,276 @@
+/* section{border: 2px solid rgb(255, 255, 255);} */
+.configuracao {
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    display: flex;
+}
+
+.informacoes{
+    width: 65%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.226);
+}
+
+.informacoes_dois{
+    width: 35%;
+    height: 100vh;
+}
+
+.informacoes_dois .banner_orion{
+    width: 100%;
+    height: 40vh;
+    background: url(/img/index/mongagua\ \(4\).png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.informacoes_dois .informacoes_pessoa{
+    width: 100%;
+    height: 60vh;
+}
+
+.perfil_foto{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto_de_perfil{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: url(/img/download.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 3px solid rgb(255, 255, 255);
+    position: absolute;
+    z-index: 999;
+    margin-top: -80px;
+}
+
+
+.bannerr {
+    height: 50vh;
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.input-file-upload {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.upload-btn {
+    position: absolute;
+    overflow: hidden;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn {
+    border-radius: 10%;
+    font-weight: 700;
+    color: #ffffff;
+    border-radius: 50%;
+    z-index: 99999999;
+    margin-top: 80px;
+    margin-left: 110px;
+    font-size: 27px;
+    width: 45px;
+    height: 45px;
+    background: rgba(0, 0, 0, 0.568);
+    cursor: pointer;
+}
+
+#camera{
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.upload-btn input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.upload_img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.nome_usuario{
+    width: 80%;
+    height: 10vh;
+    margin-left: 10%;
+    margin-top: 11vh;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.541);
+    color: #cfcfcf;
+    text-align: center;
+    display: block;
+}
+
+.user{
+    width: 90%;
+    height: 4vh;
+    margin-left: 5%;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.endereco{
+    width: 90%;
+    height: 4vh;
+    margin-left: 5%;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.opcoes{
+    width: 80%;
+    height: 8vh;
+    margin-left: 10%;
+    margin-top: 11vh;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.541);
+    color: #cfcfcf;
+    text-align: center;
+    display: flex;
+}
+
+.senha{
+    width: 47%;
+    height: 5vh;
+    margin-left: 2%;
+    margin-top: 2.5vh;
+}
+
+.excluir_conta{
+    width: 47%;
+    height: 5vh;
+    margin-left: 2%;
+    margin-top: 2.5vh;
+}
+
+.mudar_senha{
+    background: rgba(219, 142, 0, 0.842);
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.desativar_conta{
+    background: rgba(219, 0, 0, 0.842);
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.wrappper {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    transform: translate(-50%, -50%);
+    top: 25%;
+    left: 50%;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin: 5px;
+  }
+
+  .wrapper2{
+    height: 60vh;
+  }
+  .contaneer {
+    width: 100%;
+    max-width: 250px;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em 0;
+    position: relative;
+    font-size: 16px;
+    border-radius: 0.5em;
+    background-color: #21242b;
+    border-bottom: 10px solid #5808d8;
+  }
+  span.num {
+    color: #ffffff;
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    font-size: 3em;
+  }
+  span.textt {
+    color: #e0e0e0;
+    text-shadow: 2px 2px rgba(139, 0, 253, 0.822);
+    font-size: 1.4em;
+    text-align: center;
+    pad: 0.7em 0;
+    font-weight: 600;
+    line-height: 0;
+  }
+  .descricao{
+    color: #ffffff;
+    font-size: 1.3em;
+    text-align: center;
+    pad: 0.7em 0;
+    font-weight: 400;
+    line-height: 0;
+    margin-top: -35px;
+  }
+  @media screen and (max-width: 1024px) {
+    .wrappper {
+      width: 85vw;
+    }
+    .contaneer {
+      height: 26vmin;
+      width: 26vmin;
+      font-size: 12px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .wrappper {
+      width: 90vw;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .contaneer {
+      width: calc(50% - 40px);
+      height: 30vmin;
+      font-size: 14px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .wrappper {
+      gap: 15px;
+    }
+    .contaneer {
+      width: 100%;
+      height: 25vmin;
+      font-size: 8px;
+    }
+  }
